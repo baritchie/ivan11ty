@@ -14,7 +14,15 @@ module.exports = {
       '6xl': '4rem',
     },
     extend: {
+      fontFamily: {
+        quat: ['Quattrocento', 'serif'],
+        quatsans: ['Quattrocento Sans', 'sans-serif'],
+      },
       colors: {
+        darkblue: '#124559',
+        lightblue: '#598392',
+        green: '#AEC3B0',
+        lightgreen: 'EFF6E0',
         blue: {
           100: '#ebf8ff',
           200: '#bee3f8',

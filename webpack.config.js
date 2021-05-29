@@ -4,7 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const entries = glob.sync(path.resolve(__dirname, 'src/assets/images/posts/*.{png,gif,jpg,jpeg}'));
+const entries = glob.sync(path.resolve(__dirname, 'src/assets/images/*.{png,gif,jpg,jpeg}'));
 entries.push(path.resolve(__dirname, 'src/assets/styles/main.css'));
 
 // TODO: Remove if the blog does not need syntax highlight
@@ -49,7 +49,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'images/posts/[name].[ext]',
+              name: 'images/[name].[ext]',
             },
           },
           {

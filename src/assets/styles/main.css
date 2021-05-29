@@ -1,17 +1,18 @@
 @tailwind base;
 
-a {
+/* a {
   @apply text-blue-700;
 }
 
 a:hover {
   @apply underline;
-}
+} */
 
 @tailwind components;
 
 @tailwind utilities;
 
+/* 
 .content {
   @apply tracking-wider leading-8 text-xl;
 }
@@ -83,4 +84,40 @@ a:hover {
 
 .content th {
   @apply bg-gray-100;
+} */
+
+.name-fade {
+  animation: animationFrames ease 2s;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+  animation-fill-mode: forwards; /*when the spec is finished*/
+}
+
+.hero-fade {
+  animation: 3s ease 0s normal forwards 1 fadeIn;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animationFrames {
+  0% {
+    opacity: 0;
+    transform: translate(0px, -25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
 }
